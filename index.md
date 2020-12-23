@@ -13,7 +13,7 @@ Syntax highlighted code block
 
 # Header 1
 ## Header 2
-### Tencent  <a href="腾讯体育主页.html">腾讯</a>
+### Tencent  
 <a href="/腾讯体育主页.html">腾讯</a>
 - Bulleted
 - List
@@ -25,7 +25,7 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-<a href="/腾讯体育主页.html">英文版</a>
+<a href="/腾讯体育主页.html">腾讯</a>
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
