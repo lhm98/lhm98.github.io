@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			li{
+				list-style: none;
+			}
+			header{
+				height: 170px;
+			/*	background: darksalmon;*/
+				
+			}
+			header>div{
+				margin: auto;
+				width: 1240px;
+				height: 60px;
+			}
+			header>div>.headleft>li{
+				
+				float: left;
+				
+			}
+			a{
+				text-decoration: none;
+				width: 100%;
+				height: 100%;
+			}
+			.topa{
+				color: #999999;
+			}
+			header>div>.headright{
+				
+				float: right;
+			}
+			header>div>.headright>li{
+				float: left;
+			}
+			header>div>.headright>.vip{
+				text-align: center;
+				line-height: 36px;
+				background: #F6F4ED;
+				border-radius:2% ;
+				margin-right: 25px;
+			}
+			header>div>.headright>.vip:hover{
+				background: rgb(230,230,230);
+			}
+			header>div>.headright>.login{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: rgb(80,100,250);
+				margin-top: 13px;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+				font-size: 14px;
+				position: relative;
+			}
+			header>div>.headright>.login>a{
+				font-size: 12px;
+				color: white;
+				
+			}
+			header>div>.headright>.login:hover>div{
+				display: block;
+			}
+			header>div>.headright>.login>div{
+				width: 330px;
+				height: 60px;
+				background: white;
+				color: black;
+				border: 1px solid silver;
+				position: absolute;
+				left: -280px;
+				line-height: 60px;
+				margin-top: 5px;
+				display: none;
+			}
+			header>div>.headright>.login>div>.in{
+				float: right;
+			}
+			header>div>.headright>.login>div>.in>a{
+				float: right;
+				margin-top: 15px;
+				background: #e0ad14;
+				line-height: 30px;
+				width: 70px;
+				height: 30px;
+				border-radius:30px 30px 30px 30px ;
+				margin-right: 20px;
+				color: white;
+			}
+			.sanjiao{
+				position: absolute;
+				top: -10px;
+				right: 22px;
+				width:0px;
+				height:0px;
+				border: 1px solid;
+				border-top:5px solid transparent;
+				border-bottom:5px solid white;
+				border-left:5px solid transparent;
+				border-right:5px solid transparent;
+			}
+			header>.ad{
+				/*background: sandybrown;*/
+				margin: auto;
+				margin-top: 10px;
+				height: 90px;
+			}
+			header>.ad>a{
+				float: left;
+			}
+			header>.ad>div{
+				/*background: bisque;*/
+				height: 90px;
+				width: 230px;
+				float: right;
+				border: 1px solid #F6F4ED;
+				
+			}
+			header>.ad>div>.headerimg{
+				margin-top: 5px;
+				margin-left: 8px;
+				height: 80px;
+				width: 80px;
+				float: left;
+			}
+			header>.ad>div>.weixin{
+				float: right;
+				width: 120px;
+			/*	background: saddlebrown;*/
+				height: 70px;
+				margin-top:11px ;
+				margin-right: 5px;
+			}
+			header>.ad>div>.weixin>.a{
+				font-size: 14px;
+				font-weight:bold ;
+				color:#999999;
+			}
+			header>.ad>div>.weixin>.b{
+				margin-top: 8px;
+				font-size: 12px;
+				color:#999999;
+			}
+			.blue{
+				background: #408ed6;
+				width: 100%;
+				height: 80px;
+				
+			}
+			.blue>.nav{
+				width: 1240px;
+				height: 80px;
+				margin: auto;
+				
+			}
+			.blue>.nav>.navleft{
+				width: 181px;
+				height: 80px;
+				float: left;
+			}
+			.blue>.nav>.navleft>p{
+				margin-top: 15px;
+			}
+			.blue>.nav>.navleft>p>a{
+				margin-right: 15px;
+				color: white;
+				font-size: 14px;
+				padding: 4px;
+			}
+			.blue>.nav>.navleft>p>a:hover{
+				background: #327fc6;
+				color: gold;
+			}
+			.TVB_bolick{
+				width: 100%;
+				height: 50px;
+				background: #1475ba;
+				display: none;
+				position: absolute;
+				z-index: 2;
+			}
+			.TVB_bolick>div{
+				margin: auto;
+				position: relative;
+				width: 1240px;
+				height: 50px;
+			}
+			.TVB_bolick>div>li{
+				float: left;
+				margin-top:15px ;
+				margin-right: 22px;
+				
+			}
+			.TVB_bolick>div>li>a{
+				color: #9dd9ff;
+				font-size: 14px;
+				
+			}
+			.bluesanjiao{
+				position: absolute;
+				top: -14px;
+				left: 1%;
+				width:0px;
+				height:0px;
+				border-top:7px solid transparent;
+				border-bottom:7px solid #1475ba;
+				border-left:7px solid transparent;
+				border-right:7px solid transparent;
+			}
+			
+			.TVB_bolick>div>li>a:hover{
+				color: #ebd551;
+			}
+			.space{
+				margin-top: 20px;
+				width: 0px;
+				height: 40px;
+				float: left;
+				border-left: 1px solid silver;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			.blue>.nav>div>p{
+				margin-top: 15px;
+			}
+			.blue>.nav>div>p>strong>a{
+				margin-right: 15px;
+				color: white;
+				font-size: 14px;
+				padding: 4px;
+			}
+			.blue>.nav>div>p>strong>a:hover{
+				background: #327fc6;
+				color: gold;
+			}
+			.blue>.nav>div>p>a{
+				margin-right: 15px;
+				color: white;
+				font-size: 14px;
+				padding: 4px;
+			}
+			.blue>.nav>div>p>a:hover{
+				background:#327fc6;
+				color: gold;
+			}
+			.blue>.nav>.navleftA{
+				width: 264px;
+				height: 80px;
+				float: left;
+			}
+			.blue>.nav>.navright{
+				width: 205px;
+				height: 80px;
+				float: left;
+			}
+			.blue>.nav>.navrightA{
+				width: 370px;
+				height: 80px;
+				float: left;
+			}
+			.game{
+				width: 100%;
+				height: 120px;
+				/*background: salmon;*/
+				margin-top: 20px;
+			}
+			.game>.game_body{
+				width: 1240px;
+				height: 122px;
+				margin: auto;
+				/*background: silver;*/
+				position: relative;
+			}
+			.game>.game_body>a{
+				padding: 41px 0px;
+				background: #DCDCDC;
+				font-size: 28px;
+				color: white;
+				position: absolute;
+				top:0px;
+				width: 20px;
+				height: 40px;
+				z-index: 0;
+			}
+			.game>.game_body>a:hover{
+				background:#408ed6 ;
+			}
+			.game>.game_body>.over{
+				/*background: rosybrown;*/
+				width:1060px;
+				height: 122px;
+				overflow: hidden;
+				margin-left: 20px;
+				float: left;
+			}
+			.game>.game_body>.over>.big{
+				width: 3240px;
+				height: 120px;
+				/*background: darksalmon;*/
+			}
+			.game>.game_body>.over>.big>.playback{
+				width: 200px;
+				height: 117px;
+				float: left;
+				border-top: 3px solid  #408ED6;
+				/*background: sandybrown;*/
+				margin-left: 10px;
+				border-left:1px solid #DCDCDC ;
+				border-right:1px solid #DCDCDC ;
+				border-bottom:1px solid #DCDCDC ;
+			}
+			.game>.game_body>.over>.big>.playback>a>ul{
+				width: 176px;
+				height: 84px;
+				background: #FAFAFA;
+				padding: 0px 12px;
+			}
+			.game>.game_body>.over>.big>.playback>a>ul>.first{
+				font-size: 12px;
+				padding: 9px 0px 2px;
+				position: relative;
+				margin-top: 0px;
+				height:15px;
+				
+			}
+			.game>.game_body>.over>.big>.playback>a>ul>.first>strong{
+				position: absolute;
+				left: 0px;
+			}
+			.game>.game_body>.over>.big>.playback>a>ul>.first>span{
+				color: #999999;
+				position: absolute;
+				right: 0px;
+			}
+			.game>.game_body>.over>.big>.playback>a>ul>li{
+				margin-top:4px ;
+				font-size: 14px;
+				color: #393939;
+				text-align: center;
+			}
+			.game>.game_body>.over>.big>.playback>div{
+				background: white;
+				height: 33px;
+				width: 200px;
+				position: relative;
+			}
+			.game>.game_body>.over>.big>.playback>div>a{
+				font-size: 12px;
+				position: absolute;
+				top: 8px;
+				left: 42%;
+				width: 30px;
+				height: 17px;
+			}
+			.game>.game_body>.over>.big>.playback>div>a:hover{
+				color: #F15B5B;
+			}
+			.game>.game_body>.game_img{
+				width: 110px;
+				height: 120px;
+				float: left;
+				margin-left: 10px;
+				/*background: saddlebrown;*/
+			}
+			.game>.game_body>.game_img>div{
+				width: 110px;
+				height: 35px;
+				border: 1px solid #DCDCDC;
+				padding: 12px 0px;
+			}
+			.game>.game_body>.game_img>div:hover{
+			background: #FAFAFA;
+			}
+			.game>.game_body>.game_img>div>a{
+				padding: 25px 0px 12px;
+			}
+			.middle{
+				width: 100%;
+				height: 900px;
+				
+				margin-top: 30px;
+			}
+			.middle>.middle_body{
+				width: 1240px;
+				height: 720px;
+				margin: auto;
+				/*background: darkcyan;*/
+			}
+			.middle>.middle_body>.text{
+				width: 510px;
+				height: 720px;
+				float: left;
+				/*background: white;*/
+			}
+			.middle>.middle_body>.text>ul>li{
+				width: 510px;
+				padding: 6px 0px;
+			}
+			.middle>.middle_body>.text>ul>li>a{
+				color: #081626;
+				font-size: 16px;
+			}
+			.middle>.middle_body>.text>ul>li>a:hover{
+				color: rgb(241,50,50);
+			}
+			.middle>.middle_body>.text>ul>li>.bold{
+				font-size:20px ;
+				font-weight: bold;
+				padding: 15px 0px;
+			}
+			.middle>.middle_body>.middle_bodyright{
+				width: 730px;
+				height: 720px;
+				
+				float: right;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart{
+				width: 730px;
+				height: 350px;
+				/*background: mediumseagreen;*/
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart{
+				width: 528px;
+				height: 348px;
+				/*background:firebrick;*/
+				position: relative;
+				overflow: hidden;
+				float: left;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move{
+				width: 2112px;
+				height: 348px;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move>li{
+				float: left;
+				width: 528px;
+				height: 348px;
+				position: relative;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move>li>a>span{
+				color: white;
+				font-size: 18px;
+				position: absolute;
+				bottom: 25px;
+				left: 12px;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point{
+				width: 80px;
+				height: 20px;
+				position: absolute;
+				bottom: 12px;
+				right: 0px;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point>li{
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				margin-right: 10px;
+				background: white;	
+				float: left;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>#leftB{
+				position: absolute;
+				left: 0px;
+				top:50%;
+				bottom: 50%;
+				z-index: 2;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>#rightB{
+				position: absolute;
+				right: 0px;
+				top:50%;
+				bottom: 50%;
+				z-index: 2;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>div>a{
+				color: white;
+				background: rgba(0,0,0,0.6);
+				font-size: 40px;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>div>a:hover{
+				background: rgba(0,0,0,0.8);
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.hot{
+				background: url(img/m1.png) no-repeat 0px 0px;
+				width: 198px;
+				height: 187px;
+				background-size:cover;
+				float: right;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.hot>.hot_body{
+				margin-top: 73px;
+				margin-left: 11px;
+			}
+			.middle>.middle_body>.middle_bodyright>.chart>.video{
+				width: 198px;
+				height: 161px;
+				float: right;
+				background: #327FC6;
+			}
+			.pip{
+				width: 360px;
+				height: 305px;
+				background: #3580C5;
+				position: fixed;
+				bottom: 0px;
+				right: 0px;
+			}
+			.pip>div>p{
+				width: 360px;
+				height: 40px;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+			}
+			.pip>div>p>a>strong{
+				font-size: 30px;
+				color: white;
+			}
+			.middle_bodyright_bottom{
+				width: 730px;
+				height: 335px;
+				
+				margin-top: 30px;
+			}
+			.middle_bodyright_bottom>.good{
+				width: 730px;
+				height: 38px;
+				border-bottom: 1px solid silver;
+			}
+			.middle_bodyright_bottom>.good>h4{
+				border-left:5px solid #327FC6 ;
+				padding: 0px 15px;
+				font-size: 24px;
+				font-weight: 400;
+				float: left;
+				margin-right: 20px;
+			}
+			.middle_bodyright_bottom>.good>div{
+				padding: 8px 0px;
+			}
+			.middle_bodyright_bottom>.good>div>a{
+				color: #666666;
+				font-size: 16px;
+				padding: 0px 9px;
+			}
+			.middle_bodyright_bottom>.videos>ul{
+				height: 150px;
+				width: 730px;
+				
+			}
+			.middle_bodyright_bottom>.videos>ul>li{
+				width: 174px;
+				height: 120px;
+				position: relative;
+				padding: 10px 0px 15px;
+				
+				float: left;
+				margin-right:8px;
+			}
+			.middle_bodyright_bottom>.videos>ul>li>a>img{
+				width: 174px;
+				height: 100px;
+				
+			}
+			.middle_bodyright_bottom>.videos>ul>li>a>.videos_text{
+				color: white;
+				font-size: 12px;
+				/*position: absolute;*/
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+				padding: 0px 5px 0px 5px;
+				z-index: 3;
+				float: left;
+			}
+			.middle_bodyright_bottom>.videos>ul>li>a>.zanting{
+				position: absolute;				
+				top:43%;
+				bottom: 50%;
+				left: 43%;
+				right: 50%;
+				background: rgba(0,0,0,0.5);
+				border-radius:50% ;
+				width: 20px;
+				height: 20px;
+				color: white;
+				z-index: 5;
+				text-align: center;
+				display: none;
+			}
+			.middle_bodyright_bottom>.videos>ul>li>a>p{
+				color: #999999;
+				font-size:12px;
+			}
+			.bigclear{
+				width: 1240px;
+				height: 130px;
+				margin: auto;
+				margin-top: 30px;
+			}
+			.bigclear>.clear{
+				width: 1000px;
+				height: 120px;
+				float: left;
+			}
+			.bigclear>.clear>img{
+				width: 1000px;
+				height: 120px;
+				float: left;
+			}
+			.bigclear>.clear_right{
+				width: 230px;
+				height: 120px;
+				float: right;
+			}
+			.bigclear>.clear_right>img{
+				width: 230px;
+				height: 120px;
+				
+			}
+			.bfs{
+				width: 1240px;
+				height: 3500px;
+				/*background: darkgrey;*/
+				margin: auto;
+				margin-top:50px ;
+			}
+			.bfs>.bfs_left{
+				width: 880px;
+				height: 3500px;
+				float: left;
+				/*background: darkcyan;*/
+			}
+			.bfs>.bfs_left>.bfs_nav{
+				width: 880px;
+				height: 45px;
+				
+			}
+			.bfs>.bfs_left>.bfs_nav>.bfs_navleft{
+				font-size: 34px;
+				width: 118px;
+				height: 45px;
+				float: left;	
+			}
+			.bfs>.bfs_left>.bfs_nav>.bfs_navright{
+				width: 750px;
+				height: 40px;
+				float:right;
+				position: relative;
+				border-bottom:5px solid #408ed6 ;
+			}
+			.bfs>.bfs_left>.bfs_nav>.bfs_navright>span{
+				color: #999999;
+				position: absolute;
+				bottom: 0px;
+			}
+			.bfs>.bfs_left>.bfs_nav>.bfs_navright>div{
+				float: right;
+				margin-top:16px ;
+			}
+			.bfs>.bfs_left>.bfs_nav>.bfs_navright>div>a{
+				color: #666666;
+				padding: 0px 15px;
+			}
+			.blue_nav{
+				margin-top: 20px;
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+				background:#408ed6;
+				width: 100px;
+				padding: 8px 10px;
+				border-radius: 10px 10px 10px 10px;
+				text-align: center;	
+			}
+			.bfs_body{
+				width: 880px;
+				height: 720px;
+				margin-bottom: 40px;
+				float: left;
+			}
+			.bfs_body>.imgleft{
+				width: 270px;
+				height: 720px;
+				float: left;
+			}
+			.bfs_body>.imgleft>div{
+				margin-bottom: 65px;
+			}
+			.bfs_body>.imgleft>div>a>img{
+				width: 270px;
+				height: 180px;
+			}
+			.bfs_body>.imgleft>div>a{
+				position: relative;
+			}
+			.bfs_body>.imgleft>div>a>p{
+				background: rgba(0,0,0,0.5);
+				color: white;
+				font-size: 14px;
+				position: absolute;
+				bottom: 5px;
+			}
+			.bfs_body>.img_text{
+				width: 570px;
+				height: 680px;
+				
+				float: right;
+				margin-top: 26px;
+			}
+			.bfs_body>.img_text>ul{
+				width: 570px;
+				height: 190px;
+				margin-bottom: 55px;
+				border-bottom: 1px solid silver;
+			}
+			.bfs_body>.img_text>ul>li{
+				width: 570px;
+				height: 39px;
+				/*overflow: hidden;*/
+				position: relative;
+			}
+			.bfs_body>.img_text>ul>li>a{
+				font-size: 16px;
+				color: black;
+			}
+			.bfs_body>.img_text>ul>li>a:hover{
+				color: rgb(241,50,50);;
+			}
+			.bfs_body>.img_text>ul>li>span{
+				font-size: 12px;
+				color: #999999;
+				position: absolute;
+				right: 0px;
+				top: 2px;
+			}
+			.bfs>.bfs_right{
+				width: 300px;
+				height: 2222px;
+				/*background: deepskyblue;*/
+				float: right;
+			}
+			.bfs>.bfs_right>div{
+				margin-bottom: 50px;
+			}
+			.backtop{
+				width: 70px;
+				height: 180px;
+				display: none;
+				position: fixed;
+				top: 200px;
+				right: 30px;
+				
+			}
+			.backtop>.back_nav{
+				width: 70px;
+				height: 140px;
+				
+				overflow: hidden;
+			}
+			.backtop>.back_nav>ul{
+				width: 68px;
+				height: 140px;
+				margin-top: 112px;
+				border:1px solid cornflowerblue ;
+			}
+			.backtop>.back_nav>ul>li{
+				width: 70px;
+				height: 28px;
+				text-align: center;	
+			}
+			.backtop>.back_nav>ul>li:hover{
+				background:lavender;
+			}
+			.backtop>.back_nav>ul>li>a{
+				color: black;
+			}
+			.backtop>.back_totop{
+				background: #327FC6;
+				padding: 5px 0px 14px;
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/jquery-3.5.1.js"></script>
+	</head>
+	<body>
+		<header>
+			<div>
+				<ul class="headleft">
+					<li><img src="img/m4.png"/></li>
+					<li style="margin-top: 25px;font-size: 12px;"><a href="" class="topa">腾讯体育</a>
+						<span>|</span>
+						<a href="" class="topa">网站地图</a>
+					</li>
+				</ul>
+				<ul class="headright">
+					<li class="vip" style="width: 136px;height: 36px;margin-top: 20px;"><a href="" style="color: #BB8F09;width: 100%;height: 100%;">👑腾讯体育会员</a></li>
+					<li class="login"><a href="">登录</a>
+						<div >
+							登录后可观看更多精彩比赛  <div class="sanjiao"></div>
+							<div class="in"><a href="">登录</a></div>
+					</div></li>
+				</ul>
+			</div>
+			<div class="ad">
+				<a href="http://c.l.qq.com/click?oid=352861917&amp;cid=441538482&amp;click_data=EAAoADDTiQI6AEAbWhAwNUJFRkQwQjIzOTU5QTBD_viewid_Oj!voBWNvlA3v2tCezdoQc8mxInZBVApTvGTC8_qu_DCxy!HVf85FIiV1UpeNHXcsfgM9KoqF1wRh6ei3hu4fig5GtFokLEDjXpS1o6qFQuqMUblCNDHmgSMZ5T6Adcs&amp;adtype=&amp;appversion=0&amp;contract=2&amp;jtype=0&amp;i=1&amp;os=0&amp;s_lp=101&amp;acttype=__ACT_TYPE__&amp;ch=__CHANNEL_ID__&amp;seq=__SEQ__&amp;aseq=__ABS_SEQ__&amp;rt=__RETURN_TYPE__&amp;s=%7B%22da%22%3A%22__WIDTH__%22%2C%22db%22%3A%22__HEIGHT__%22%2C%22down_x%22%3A%22__DOWN_X__%22%2C%22down_y%22%3A%22__DOWN_Y__%22%2C%22up_x%22%3A%22__UP_X__%22%2C%22up_y%22%3A%22__UP_Y__%22%7D&amp;clklpp=__CLICK_LPP__&amp;xp=2&amp;cm2expid=34003&amp;cm2traceid=&amp;vto=__VIDEO_PLAY_TIME__" target="_blank" style="display:block;cursor:pointer;width:1000px;height:90px;background-image:url(//pgdt.gtimg.cn/gdt/0/EAAoP0LAPoABaAAAIimBf0eLeDkXhFYat.jpg/0?ck=a9b28cba15dc78b85250bac64afdaf20);background-size:1000px 90px;background-position:50% 50%;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//pgdt.gtimg.cn/gdt/0/EAAoP0LAPoABaAAAIimBf0eLeDkXhFYat.jpg/0?ck=a9b28cba15dc78b85250bac64afdaf20',sizingMethod='scale');"></a>			
+			<div >
+				<div class="headerimg" >
+					<img src="img/m5.jpg"/>
+				</div>
+				<div class="weixin" >
+					<p class="a">腾讯体育微信账号</p>
+					<p class="b">吐槽版的新闻体育，&emsp;直播信息早知道</p>	
+					
+				</div>
+			</div>
+			</div>
+			
+		</header>
+		<div class="blue">
+			<div class="nav">
+				<div class="navleft" style="margin-left: 0px;">
+					<p><a href="J/J.html">滚动</a><a href="">直播</a><a href="">企鹅直播</a></p>
+					<p style="margin-top: 8px;"><a href="" class="TVB">视频</a><a href="">电竞视频</a><a href="">社区</a></p>
+				</div>
+				<div class="space">
+				</div>
+				<div class="navleftA">
+					<p>
+						<strong><a href="">NBA</a></strong>
+						<a href="">ESPN</a><a href="J/dianbo.html">点播</a><a href="">红旗企鹅跑</a>
+					</p>
+					<p style="margin-top: 8px;">
+						<strong><a href="">CBA</a></strong>
+						<a href="">超新星运动会</a>
+					</p>
+				</div>
+				<div class="space">
+				</div>
+				<div class="navright">
+					<p>
+						<a href="">英超</a><a href="J/La Liga.html">西甲</a><a href="">德甲</a><a href="">意甲</a>
+					</p>
+					<p style="margin-top: 8px;">
+					<a href="">欧冠</a><a href="">中超</a><a href="">亚冠</a><a href="">国足</a>
+					</p>
+				</div>
+				<div class="space">
+				</div>
+				<div class="navrightA">
+					<p>
+						<strong><a href="">综合</a></strong><a href="">网球</a><a href="">排球</a><a href="">NFL</a><a href="">WUCL</a><a href="">搏击</a><a href="">冰雪</a>
+					</p>
+					<p style="margin-top: 8px;">
+						<a href="">S10</a><a href="">KPL</a><a href="">F1</a><a href="">NHL</a><a href="">跑步</a><a href="">法网中文官网</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<ul class="TVB_bolick">
+			<div class="">
+			<div class="bluesanjiao"></div>
+				<li><a href="">NBA</a></li>
+				<li><a href="">TOP时刻</a></li>
+				<li><a href="">全场回放</a></li>
+				<li><a href="">视屏库</a></li>
+				<li><a href="">比赛库</a></li>
+				<li><a href="">全景NBA</a></li>
+				<li><a href="">绝对经典</a></li>
+				<li><a href="">长暂停</a></li>
+				<li><a href="">有求必应</a></li>
+				<li><a href="">就是l</a></li>
+				<li><a href="">看球听歌</a></li>
+			</div>
+		</ul>
+		<div class="game">
+			<div class="game_body">
+				<a href="" class="left"><</a>
+					<div class="over">
+					<div class="big">
+						
+	
+				<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+				</div>
+				<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>NFL橄榄球</strong><span>直播</span></li>
+					<li style="margin-bottom:5px ;">RedZone达阵区</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+				
+				<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>直播</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">直播</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>已结束</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+			<div class="playback" >
+				<a href=""><ul>
+					<li class="first"><strong>LPL</strong><span>直播</span></li>
+					<li style="margin-bottom:5px ;">2020英雄联盟全明星赛</li>
+					<li style="color: #999999;">12月20日   12：00</li>
+				</ul></a>
+				<div >
+					<a href="">回放</a>
+				</div>
+			</div>
+					</div>
+					</div>
+					
+					
+				<div class="game_img">
+					<div class="">
+						<a href=""><img src="img/m6.png"/></a>
+					</div>
+					<div class="">
+						<a href=""><img src="img/m7.png"/></a>
+					</div>
+					
+				</div>	
+				<a href="" class="right">></a>
+			</div>
+		</div>	
+			<div class="middle">
+			<div class="middle_body">
+			<div class="text">
+			<ul>
+			<li><a href="" class="bold">正视频直播英超：热刺vs莱斯特 孙兴慜冲百球里程碑</a></li>
+			<li><a href="">深圳拒绝21分大逆转险胜广州 布克31分摩尔错失绝杀</a></li>
+			<li><a href="">薪金专家：林书豪仍有机会签约勇士 周一有最终结果</a></li>
+			<li><a href="">CBA-青岛多点开花力克北京取4连胜 亚当斯伤退方硕29＋8</a></li>
+			<li><a href="">戈贝尔拒续约后危矣？美媒建议送他入绿凯，获一首轮＋1790万交易...</a></li>
+			<li><a href="" class="bold">6.2秒！五大联赛史上最快进球诞生，米兰天才一战成名</a></li>
+			<li><a href="">6.2秒！五大联赛史上最快进球诞生，21岁天才炸裂全场，一战成名</a></li>
+			<li><a href="">有排面！《新闻联播》报道山东鲁能足协杯夺冠，江苏苏宁中超捧杯</a></li>
+			<li><a href="">哈登扎心吗？韦少离开他迅速找到“新欢”：跟比尔大笑热聊太开心</a></li>
+			<li><a href="" class="bold">湖人快船篮网雄鹿热火 哪队拥有联盟最强的五人组？</a></li>
+			<li><a href="">曾被周杰伦调侃！郭艾伦跨年晚会献唱《真心英雄》 直言：唱歌挺难</a></li>
+			<li><a href="">社交圈：湖人快船篮网雄鹿热火 哪队拥有联盟最强的五人组？</a></li>
+			<li><a href="">三球4场季前赛水平如何？传球篮板强，投篮不稳，天赋不比球哥差</a></li>
+			<li><a href="">拒绝走捷径，字母哥谈夺冠目标：这需要时间，乔丹季后赛也挣扎过</a></li>
+			<li><a href="">英超六强创造力分布图：热刺最差，利物浦曼城独一档！</a></li>
+			<li><a href="">赔偿3千万！中甲劲旅遭重创，西班牙名帅上告FIFA美女老总败诉</a></li>
+			<li><a href="">富力官宣阿德里安、日夫科维奇离队：感谢，后会有期！</a></li>
+			<li><a href="">2020年福州马拉松赛举行，尹顺金、杨花分获男女全马冠军</a></li>
+			<li><a href="">皇马机会来了！剑指5连胜 甩巴萨8分追平第1名？看本泽马的了！</a></li>
+			<li><a href="">曝申花王牌外援离队！不满4千万年薪要求翻倍，大V怒批他亚冠疑似摆..</a></li>
+			<li><a href="">替补登场36分钟遭换下！迷失自我的萨内，真的和拜仁八字不合吗？</a></li>
+			</ul>
+			</div>
+			<div class="middle_bodyright">
+				<div class="chart">
+					<div class="rotation_chart">
+						<div id="leftB"><a href=""><</a></div>
+						<div id="rightB"><a href="">></a></div>	
+						
+						<ul class="move">
+							<li>
+							<a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/35/218/2325/151238750.jpg"/>
+							<span>正视频直播2020英雄联盟全明星	</span>
+							</a>
+							</li>
+							<li>
+							<a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/155/213/2325/151237595.jpg"/>
+							<span>伞兵张虹不拼颜值比实力 “助攻”电竞出圈有秘籍	</span>
+							</a>
+							</li>
+							<li>
+							<a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/63/212/2325/151237248.jpg"/>
+							<span>《企鹅小课堂》第1期 雪上HIP-HOP：单板滑雪	</span>
+							</a>
+							</li>
+							<li>
+							<a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/120/144/2325/151219965.jpg"/>
+							<span>跑步达人都在听的宝藏运动歌单	</span>
+							</a>
+							</li>
+						</ul>
+						<ul class="point">
+							<li style="background:#008B8B ;"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="hot">
+						<div class="hot_body">
+							<a href=""><img src="http://mat1.gtimg.com/sports/sports/banner.png"/></a>
+						</div>
+					</div>
+					<div class="video">
+						<div class="">
+							<p style="background: #327FC6;padding: 3px 0px;"><span style="color: #B3DBFF;padding: 5px 2px;font-size: 12px;background:darkblue ;">热门</span><a href="" style="font-size: 12px; color: white;">&nbsp;&nbsp;&nbsp;&nbsp;快看这就是热门！</a></p>
+						</div>
+						<video src="img/m2.mp4" controls="controls" loop="loop" autoplay="autoplay" muted="muted" style="width: 198px; height: 135px;"></video>
+					</div>
+				</div>
+				
+				<div class="middle_bodyright_bottom">
+					<div class="good">
+						<h4>精彩视频</h4>
+						<div >
+						<a href="">热门全场集锦</a>
+						<a href="" style="border-left:1px solid silver ;border-right:1px solid silver ;">最热</a>
+						<a href="">NBA</a>
+						<a href="" style="border-left:1px solid silver ;border-right:1px solid silver ;">CBA</a>
+						<a href="">英超</a>
+						<a href="" style="border-left:1px solid silver ;border-right:1px solid silver ;">中超</a>
+						<a href="">欧冠</a>
+						<a href="" style="border-left:1px solid silver ;border-right:1px solid silver ;">综合</a>
+						<a href="">功夫</a>
+						</div>
+					</div>
+					<div class="videos">
+						<ul>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/f0035rqadu2_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/q3156cefncg_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/z00340e4y5l_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/c3214gp7chg_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+						</ul>
+					<ul>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/d0035usjlva_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/j0035blfin4_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/b0035xr1hqo_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+							<li><a href=""><img src="http://puui.qpic.cn/qqvideo_ori/0/s0034e0rq48_496_280/0"/>
+							<span class="videos_text">21日《长暂停》詹姆斯斩获大..</span>	
+							<span class="iconfont icon-zanting zanting"></span>
+							<p>08:02 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19万</p>
+							</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			</div>
+			<!--这是中间的大图片-->
+			<div class="bigclear">
+				<div class="clear">
+				<img src="img/m3.jpg"/>
+			</div>
+			<div class="clear_right">
+				<img src="img/m3.jpg"/>
+			</div>
+			</div>
+			
+			<!--这是分类文字-->
+			<div class="bfs">
+				<div class="bfs_left">
+					<!--<这是标题-->
+					<div class="bfs_nav">
+						<div class="bfs_navleft">
+							  🏀篮球
+						</div>
+						<div class="bfs_navright">
+							<span>BASKETBALL</span>
+							<div class="">
+								<a href="">视频</a>
+								<a href="" style="border-left: 1px solid silver;border-right: 1px solid silver;">NBA赛程</a>
+								<a href="">NBA图片</a>
+								<a href="" style="border-right: 1px solid silver;border-left: 1px solid silver;">社区</a>
+								<a href="">中国篮球</a>
+							</div>
+						</div>
+					</div>
+					<!--这是蓝标-->
+					<div class="blue_nav">
+						NBA
+					</div>
+					<div class="bfs_body">
+						<div class="imgleft">
+							<div style="margin-top: 25px;"><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12943179198_294195/0"/> <p>更衣室毒瘤？名宿吐槽哈登交易陷入僵局：火箭和潜在下家都被坑</p></a></div>
+							<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/209/104/2325/151209854.jpg"/> <p>湖人前锋透露球队新赛季策略：预计会有11人进入轮转</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12942705288_294195/0"/> <p>朗佐鲍尔未能提前续约的主要原因是，他想要一份接近顶薪的合同！</p></a></div>
+						</div>
+						<div class="img_text">
+							<ul>
+								<li><a href="">湖人首发抢位4选2！小加上岸马修斯掉队？库兹马施罗德激烈PK</a> <span>12-21 21:21:29</span></li>
+								<li><a href="">把库里当西蒙斯防？真头一次见！这防守态度，活该拿不到大合同啊</a><span>12-21 21:21:29</span></li>
+								<li><a href="">11年韦德场均26分，比司机还强但热火输了，波什和詹姆斯呢？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">单赛季3000分很难吗？科比和哈登0次，乔丹1次，此人却3次</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟本赛季奢侈税总额目前为2.44亿美元 将创造历史纪录</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">会说谎的数据！顶薪的戈贝尔和底薪的怀特塞德，到底差在哪里？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">AJ35“郭艾伦”配色爆出！这是最美AJ35吗？！</a><span>12-21 21:21:29</span></li>
+								<li><a href="">浓眉＋乔治会怎样？AD曾想携手乔治，步行者高层态度让一切破局</a><span>12-21 21:21:29</span></li>
+								<li><a href="">林书豪与勇士签约失败原因曝光：离开CBA后未能及时拿到澄清信</a><span>12-21 21:21:29</span></li>
+								<li><a href="">一百二十九年前的今天：詹姆斯-奈史密斯发明篮球运动</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">大范甘迪：锡安大部分时间会搭档亚当斯出场 但也可能打中锋</a><span>12-21 21:21:29</span></li>
+								<li><a href="">好家伙！威少进化！6000万先生季前赛怒打29铁！</a><span>12-21 21:21:29</span></li>
+								<li><a href="">皮尔斯：詹姆斯可以进前五，但他生在乔丹的年代，一个...</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟第一＋联盟第一！如果你再给湖人一点时间，新赛季就大结局了</a><span>12-21 21:21:29</span></li>
+								<li><a href="">湖人队内的幸运儿！辗转四大豪门，年薪180万，他和老詹关系甚密</a><span>12-21 21:21:29</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					
+					<!--这是蓝标-->
+					<!--<div class="blue_nav">
+						NBA
+					</div>-->
+					<div class="bfs_body">
+						<div class="imgleft">
+							<div style="margin-top: 25px;"><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12936039966_294195/0"/> <p>救世主！布克关键进球＋制胜封盖 深圳距第12仅差1场冲季后赛</p></a></div>
+							<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/209/104/2325/151209854.jpg"/> <p>湖人前锋透露球队新赛季策略：预计会有11人进入轮转</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12943791562_294195/0"/> <p>稳步提升！中国足协官宣：中超赛季累计观众超16亿 上涨37.4％</p></a></div>
+						</div>
+						<div class="img_text">
+							<ul>
+								<li><a href="">湖人首发抢位4选2！小加上岸马修斯掉队？库兹马施罗德激烈PK</a> <span>12-21 21:21:29</span></li>
+								<li><a href="">把库里当西蒙斯防？真头一次见！这防守态度，活该拿不到大合同啊</a><span>12-21 21:21:29</span></li>
+								<li><a href="">11年韦德场均26分，比司机还强但热火输了，波什和詹姆斯呢？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">单赛季3000分很难吗？科比和哈登0次，乔丹1次，此人却3次</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟本赛季奢侈税总额目前为2.44亿美元 将创造历史纪录</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">会说谎的数据！顶薪的戈贝尔和底薪的怀特塞德，到底差在哪里？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">AJ35“郭艾伦”配色爆出！这是最美AJ35吗？！</a><span>12-21 21:21:29</span></li>
+								<li><a href="">浓眉＋乔治会怎样？AD曾想携手乔治，步行者高层态度让一切破局</a><span>12-21 21:21:29</span></li>
+								<li><a href="">林书豪与勇士签约失败原因曝光：离开CBA后未能及时拿到澄清信</a><span>12-21 21:21:29</span></li>
+								<li><a href="">一百二十九年前的今天：詹姆斯-奈史密斯发明篮球运动</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">大范甘迪：锡安大部分时间会搭档亚当斯出场 但也可能打中锋</a><span>12-21 21:21:29</span></li>
+								<li><a href="">好家伙！威少进化！6000万先生季前赛怒打29铁！</a><span>12-21 21:21:29</span></li>
+								<li><a href="">皮尔斯：詹姆斯可以进前五，但他生在乔丹的年代，一个...</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟第一＋联盟第一！如果你再给湖人一点时间，新赛季就大结局了</a><span>12-21 21:21:29</span></li>
+								<li><a href="">湖人队内的幸运儿！辗转四大豪门，年薪180万，他和老詹关系甚密</a><span>12-21 21:21:29</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					
+					
+					<div class="bfs_nav">
+						<div class="bfs_navleft">
+							  ⚽足球
+						</div>
+						<div class="bfs_navright">
+							<span>FOOTBALL</span>
+							<div class="">
+								<a href="">英超</a>
+								<a href="" style="border-left: 1px solid silver;border-right: 1px solid silver;">西甲</a>
+								<a href="">欧冠</a>
+								<a href="" style="border-right: 1px solid silver;border-left: 1px solid silver;">中超</a>
+								<a href="">亚冠</a>
+							</div>
+						</div>
+					</div>
+						<!--这是蓝标-->
+					<!--<div class="blue_nav">
+						NBA
+					</div>-->
+					<div class="bfs_body">
+						<div class="imgleft">
+							<div style="margin-top: 25px;"><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12942745102_294195/0"/> <p>曝FIFA将严惩贵州恒丰：三年内不准引援！禁止球员注册</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12943828639_294195/0"/> <p>失控的VAR！皇马5天两度“受益”事出有因？谁在背后捣鬼？</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12943719016_294195/0"/> <p>曼城“变脸”再出发，瓜迪奥拉自我革命豪赌欧冠</p></a></div>
+						</div>
+						<div class="img_text">
+							<ul>
+								<li><a href="">28助＋37.4％！英超新助攻王诞生，红军飞翼比肩德布劳K</a> <span>12-21 21:21:29</span></li>
+								<li><a href="">把c罗当西蒙斯防？真头一次见！这防守态度，活该拿不到大合同啊</a><span>12-21 21:21:29</span></li>
+								<li><a href="">拉什福德和孙兴慜，谁实力更强？球迷给出答案，且大局已定</a><span>12-21 21:21:29</span></li>
+								<li><a href="">米体评米兰锋线引援人选：吉鲁的即战力最强，佩莱的签</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟本赛季奢侈税总额目前为2.44亿美元 将创造历史纪录</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">会说谎的数据！顶薪的戈贝尔和底薪的怀特塞德，到底差在哪里？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">国米头号福星！森西本赛季出场蓝黑军团6胜1平，他才是球</a><span>12-21 21:21:29</span></li>
+								<li><a href="">梅罗又展开隔空对决！当梅老板摘得西甲金靴，罗总裁也...</a><span>12-21 21:21:29</span></li>
+								<li><a href="">足协：本赛季中超共吸引3.89亿电视观众，较上赛季增长2</a><span>12-21 21:21:29</span></li>
+								<li><a href="">一百二十九年前的今天：詹姆斯-奈史密斯发明篮球运动</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">大范甘迪：锡安大部分时间会搭档亚当斯出场 但也可能打中锋</a><span>12-21 21:21:29</span></li>
+								<li><a href="">齐耶赫和哈弗茨，谁更适合切尔西？看完分析，豁然开朗</a><span>12-21 21:21:29</span></li>
+								<li><a href="">国足最强归化恐泡汤，特谢拉归化条件曝光，狮子大开口...</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟第一＋联盟第一！如果你再给湖人一点时间，新赛季就大结局了</a><span>12-21 21:21:29</span></li>
+								<li><a href="">4年6.4亿！国足史上最大合同正在酝酿，媒体人：并不过分</a><span>12-21 21:21:29</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					
+					
+					<div class="bfs_nav">
+						<div class="bfs_navleft">
+							  🏃‍综合
+						</div>
+						<div class="bfs_navright">
+							<span>SPORTS</span>
+							<div class="">
+								<a href="">跑步</a>
+								<a href="" style="border-left: 1px solid silver;border-right: 1px solid silver;">功夫搏击</a>
+								<a href="">冰雪</a>
+								<a href="" style="border-right: 1px solid silver;border-left: 1px solid silver;">社区</a>
+								<a href="">高尔夫</a>
+							</div>
+						</div>
+					</div>
+						<!--这是蓝标-->
+					<!--<div class="blue_nav">
+						NBA
+					</div>-->
+					<div class="bfs_body">
+						<div class="imgleft">
+							<div style="margin-top: 25px;"><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12943092223_294195/0"/> <p>6-0爆大冷，国乒大满贯开局2分钟连丢5球，28岁老将焕发第二春</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12942448575_294195/0"/> <p>【排超观点】如果没有李盈莹脚踩中线 江苏女排真为夺冠做好准备了吗？</p></a></div>
+							<div><a href=""><img src="https://inews.gtimg.com/newsapp_ls/0/12942854484_294195/0"/> <p>女排奥运冠军迎本命年生日！妆容精致虔诚许愿，想好退役后生活</p></a></div>
+						</div>
+						<div class="img_text">
+							<ul>
+								<li><a href="">讨论：女排比赛中攻手踩中线，致使拦网球员踩脚受伤，...</a> <span>12-21 21:21:29</span></li>
+								<li><a href="">谁能接班郎平？11冠教头已到退休边缘，陈忠和能否重新</a><span>12-21 21:21:29</span></li>
+								<li><a href="">郎才女貌！25岁田径女神走进婚姻殿堂，晒出二人甜蜜合影？</a><span>12-21 21:21:29</span></li>
+								<li><a href="">林高远彻底爆发！连赢梁靖崑、周启豪立大功，林昀儒又惨</a><span>12-21 21:21:29</span></li>
+								<li><a href="">联盟本赛季奢侈税总额目前为2.44亿美元 将创造历史纪录</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">韩飞龙迎来首场自由搏击内战，对阵GLORY八人赛冠军徐..</a><span>12-21 21:21:29</span></li>
+								<li><a href="">AJ35“郭艾伦”配色爆出！这是最美AJ35吗？！</a><span>12-21 21:21:29</span></li>
+								<li><a href="">浓眉＋乔治会怎样？AD曾想携手乔治，步行者高层态度让一切破局</a><span>12-21 21:21:29</span></li>
+								<li><a href="">江苏19岁天才小将倪非凡，能否复制龚翔宇奇迹，参加东京..</a><span>12-21 21:21:29</span></li>
+								<li><a href="">一百二十九年前的今天：詹姆斯-奈史密斯发明篮球运动</a><span>12-21 21:21:29</span></li>
+							</ul>
+							<ul>
+								<li><a href="">大范甘迪：锡安大部分时间会搭档亚当斯出场 但也可能打中锋</a><span>12-21 21:21:29</span></li>
+								<li><a href="">网坛动容时刻丨​德约科维奇等67名球员站到球场上，宣布</a><span>12-21 21:21:29</span></li>
+								<li><a href="">皮尔斯：詹姆斯可以进前五，但他生在乔丹的年代，一个...</a><span>12-21 21:21:29</span></li>
+								<li><a href="">阿尔本：被降级的消息很伤人 但不会放弃</a><span>12-21 21:21:29</span></li>
+								<li><a href="">湖人队内的幸运儿！辗转四大豪门，年薪180万，他和老詹关系甚密</a><span>12-21 21:21:29</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div class="bfs_right">
+				<div >
+					<a href=""><img src="https://tiem-cdn.qq.com/o2/images/cf8c2dda18c28a94366c1352b2081144.jpg"/></a>
+				</div>
+				<div >
+					<a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/210/237/2206/143505795.jpg"/></a>
+				</div>
+				<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/52/12/2302/149690662.jpg" alt="" /></a></div>
+				<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/48/12/2302/149690658.jpg" alt="" /></a></div>
+				<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/122/103/2312/150364187.png" alt="" /></a></div>
+				<div><a href=""><img src="http://img1.gtimg.com/sports/pics/hv1/225/148/2214/144003315.jpg"/></a></div>
+			</div>
+			</div>
+			
+			</div>
+		<div class="pip" style="display: none;">
+			<div class="">
+				<p>画中画在这里：对称之王！！！&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><strong>x</strong></a></p>
+			</div>
+			<video src="img/m2.mp4" controls="controls" loop="loop" autoplay="autoplay" muted="muted" style="width: 360px; height: 260px;" ></video>
+		</div>
+		
+		<div class="backtop">
+			<div class="back_nav">
+				<ul>
+					<li><a href="" style="color: cornflowerblue;">导航👇</a></li>
+					<li><a href="">要闻</a></li>
+					<li><a href="">篮球</a></li>
+					<li><a href="">足球</a></li>
+					<li><a href="">综合</a></li>
+				</ul>
+			</div>
+			<div class="back_totop">
+				<a href="">👆</a>
+			</div>
+		</div>
+		<script>
+//			$(".TVB").mouseover(function(){
+//				$(".TVB_bolick").css("display","block");
+//				if()
+//			})
+//			这是视频下的隐藏!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			$(".TVB").hover(function(){
+				$(".TVB_bolick").css("display","block");
+			},function(){
+				$(".TVB_bolick").css("display","none");
+			})
+			$(".TVB_bolick").mouseover(function(){
+				$(".TVB_bolick").css("display","block");
+			})
+			$(".TVB_bolick").mouseout(function(){
+				$(".TVB_bolick").css("display","none");
+			})
+//			$(".game>.game_body>.left").click(function(){
+//				$(".game>.game_body>.over>.big")
+//			})
+//			这是赛事！！！！！！！！！！！！！！！
+			$(".game>.game_body>.right").click(function(event){
+				event.preventDefault();
+			})
+			$(".game>.game_body>.left").click(function(event){
+				event.preventDefault();
+			})
+			var i=0;
+			$(".game>.game_body>.right").click(function(){
+				i++;
+				if(i<3){
+					$(".game>.game_body>.over>.big").animate({"margin-left":-i*1060+"px"},800);
+				}else{
+					i=2;
+				}
+				})
+			
+			$(".game>.game_body>.left").click(function(){
+				i--;
+				if(i==-1){
+					i=2;
+				}
+					$(".game>.game_body>.over>.big").animate({"margin-left":-i*1060+"px"},800);
+
+				})
+			var span=$(".game>.game_body>.over>.big>.playback>a>ul>.first>span");
+			if($(".game>.game_body>.over>.big>.playback>a>ul>.first>span").html()=="已结束"){
+				$(".game>.game_body>.over>.big>.playback>a>ul>.first>span").css("color","#f15b5b");
+			}
+//			console.log($(".game>.game_body>.over>.big>.playback>a>ul>.first>span")); 
+//			console.log($(span).html());
+			/**
+			 * 这是轮播图！！！！！！！！！！！！！！！！！！！！！！
+			 */
+			var j=0
+			
+			var timer=setInterval(function(){
+				j++;
+				if(j==4){
+					j=0;
+				}
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move").animate({"margin-left":-528*j+"px"},3000);
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point>li").eq(j).css("background","#008B8B").siblings().css("background","white");
+			},3000)
+			$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart").mouseover(function(){
+				clearInterval(timer);
+			})
+			$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart").mouseout(function(){
+				timer=setInterval(function(){
+				j++;
+				if(j==4){
+					j=0;
+				}
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move").animate({"margin-left":-528*j+"px"},3000);
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point>li").eq(j).css("background","#008B8B").siblings().css("background","white");
+			},3000)
+			})
+			$("#leftB").click(function(event){
+				event.preventDefault();
+			})
+			$("#rightB").click(function(event){
+				event.preventDefault();
+			})
+			$("#leftB").click(function(){
+				i--;
+				if(i==-1){
+					i=3;
+				}
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move").animate({"margin-left":-528*i+"px"},2000);
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point>li").eq(i).css("background","#008B8B").siblings().css("background","white");
+			})
+			$("#rightB").click(function(){
+				i++;
+				if(i==4){
+					i=0;
+				}
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.move").animate({"margin-left":-528*i+"px"},2000);
+				$(".middle>.middle_body>.middle_bodyright>.chart>.rotation_chart>.point>li").eq(i).css("background","#008B8B").siblings().css("background","white");
+			})
+//			关闭画中画!!!!!!!!!!!!!!!!
+			$(".pip>div>p>a>strong").click(function(event){
+				event.preventDefault();
+			})
+			$(".pip>div>p>a>strong").click(function(){
+				$(".pip").remove();
+			})
+//			滚轮事件!!!!!!!
+			$(window).scroll(function(){
+//				当前滚动高度
+//				console.log($(window).scrollTop());
+				if($(window).scrollTop()>700){
+					$(".pip").show();
+					$(".backtop").show();
+				}else{
+					$(".pip").hide();
+					$(".backtop").hide();
+				}
+			})
+			
+//			这是暂停图标的隐藏!!!!!!!!!!!!!!!!!!!!!!
+			var lis=$(".middle_bodyright_bottom>.videos>ul>li")
+			$(lis).hover(function(){
+				$(this).children().children(".zanting").css("display","block");
+			},function(){
+				$(".middle_bodyright_bottom>.videos>ul>li>a>.zanting").css("display","none");
+			})
+			
+//			导航条以及回到顶部!!!!!!!!!!!!!!!!!!!!!
+		$(".backtop>.back_nav>ul>li>a").click(function(event){
+			event.preventDefault();
+		})
+		$(".backtop>.back_totop>a").click(function(event){
+			event.preventDefault();
+		})
+				$(".backtop>.back_nav>ul>li>a").eq(0).hover(function(){
+				$(".backtop>.back_nav>ul>li>a").eq(0).html("导航👆");
+			},function(){
+				$(".backtop>.back_nav>ul>li>a").eq(0).html("导航👇");
+			})
+			
+			$(".backtop>.back_nav>ul>li>a").eq(0).click(function(){
+				if(parseInt($(".backtop>.back_nav>ul").css("margin-top"))>1 ){
+				$(".backtop>.back_nav>ul").animate({"margin-top":0+"px"},500);
+				}else{
+					$(".backtop>.back_nav>ul").animate({"margin-top":112+"px"},500);
+				}
+			})
+//             console.log(parseInt($(".backtop>.back_nav>ul").css("margin-top"))) ;
+			$(".backtop>.back_nav>ul>li>a").eq(1).click(function(){
+				$("html,body").animate({"scrollTop":"410px"},800);
+			})
+			$(".backtop>.back_nav>ul>li>a").eq(2).click(function(){
+				$("html,body").animate({"scrollTop":"1310px"},800);
+			})
+			$(".backtop>.back_nav>ul>li>a").eq(3).click(function(){
+				$("html,body").animate({"scrollTop":"2950px"},800);
+			})
+			$(".backtop>.back_nav>ul>li>a").eq(4).click(function(){
+				$("html,body").animate({"scrollTop":"3760px"},800);
+			})
+			$(".backtop>.back_totop>a").click(function(){
+				$("html,body").animate({"scrollTop":"0px"},800)	
+			})
+			console.log($(window).scrollTop());
+		</script>
+	</body>
+</html>

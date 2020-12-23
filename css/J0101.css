@@ -1,0 +1,118 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+header{
+	height: 48px;
+	background-color: #51b7ec;
+}
+header>.header_logo{
+	margin-left: 450px;
+	width: 119px;
+	height: 42px;
+	background-image: url(../img/J_0102.png);
+	background-position: 0px 0px;
+	float: left;
+}
+header>.header_LogIn{
+	float: right;
+}
+
+header>.header_LogIn{
+    margin-top: 13px;
+    margin-right: 375px;
+}
+
+header>.header_LogIn>ul>li{
+	float: left;
+	padding-right: 10px;
+	font-size: 12px;
+	
+}
+header>.header_LogIn>ul>li>a{
+	color: white;
+}
+
+#a{
+	display: block;
+	width: 11px;
+	height: 11px;
+	background-image: url(../img/J_0102.png);
+	background-position: 0px -49px;
+     margin-top: 6px;
+	
+}
+
+/*快速安全登录*/
+section>.QuickLogin{
+	width: 403px;
+	height: 325px;
+	position: absolute;
+	top: 50px;
+	left: 311px;
+	border-right: 1px solid gainsboro;
+}
+
+section>.QuickLogin>p{
+	text-align: center;
+	margin-top: 20px;
+}
+
+section>.QuickLogin>img{
+	width: 134px;
+	height: 134px;
+	margin-left: 140px;
+	margin-top: 24px;
+}
+section>.QuickLogin>ul{
+	float: right;
+    position: absolute;
+    bottom: 0px;
+    right: 65px;
+}
+section>.QuickLogin>ul>li{
+	float: left;
+	font-size: 12px;
+	margin-right: 10px;
+}
+section>.QuickLogin>ul>li>a{
+	color: #666666;	
+}
+
+/*权限*/
+section>.Access{
+	width: 403px;
+	height: 325px;
+	position: absolute;
+	top: 48px;
+	right: 207px;
+}
+
+section>.Access>p{
+	padding: 10px 0px;
+	font-size:12px;
+	border-top: 1px solid gainsboro;
+}
+section>.Access>p>a:after{
+	content: "将获得以下权限：";
+	color: #555;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+section>.Access>span>a:before{
+	content: "授权后表明你已同意";
+	color: #555;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+
+
+

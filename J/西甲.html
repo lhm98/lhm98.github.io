@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>西甲联赛</title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			header {
+				width: 100%;
+				height: 170px;
+			}
+
+			header>.pic {
+				margin-left: auto;
+				margin-right: auto;
+				width: 1250px;
+				height: 90px;
+			}
+
+			header>.pic>.logo {
+				height: 90px;
+				width: 70px;
+				float: left;
+			}
+
+			header>.pic>.name {
+				line-height: 80px;
+				height: 80px;
+				width: 200px;
+				font-size: 46px;
+				color: #aea47e;
+				margin-top: 8px;
+				float: left;
+			}
+
+			header>.pic>.txt {
+				width: 150px;
+				height: 30px;
+				margin-top: 50px;
+				margin-left: 20px;
+				float: left;
+				font-size: 18px;
+			}
+
+			header>.nav_top {
+				width: 100%;
+				height: 40px;
+				background: black;
+			}
+
+			header>.nav_top>.top {
+				margin-left: auto;
+				margin-right: auto;
+				width: 1250px;
+				height: 40px;
+			}
+
+			header>.nav_top>.top>.nav_logo {
+				width: 120px;
+				height: 22px;
+				margin-top: 10px;
+				float: left;
+			}
+
+			header>.nav_top>.top>.main {
+				width: 480px;
+				height: 40px;
+				float: left;
+			}
+
+			header>.nav_top>.top>.main>ul>li {
+				text-align: center;
+				width: 80px;
+				list-style: none;
+				line-height: 40px;
+				float: left;
+				font-size: 16px;
+				color: white;
+			}
+
+			header>.nav_top>.top>.main>ul>li:hover {
+				background: #041450;
+			}
+
+			header>.nav_bottom {
+				width: 100%;
+				height: 40px;
+				background: #102029;
+			}
+
+			header>.nav_bottom>.bottom {
+				margin-left: auto;
+				margin-right: auto;
+				width: 1250px;
+				height: 40px;
+			}
+
+			header>.nav_bottom>.bottom>.sub {
+				width: 480px;
+				height: 40px;
+				float: left;
+			}
+
+			header>.nav_bottom>.bottom>.sub>ul>li {
+				width: 80px;
+				list-style: none;
+				line-height: 40px;
+				float: left;
+				font-size: 14px;
+				color: white;
+			}
+
+			header>.nav_bottom>.bottom>.sub>ul>li:hover {
+				color: red;
+			}
+
+			#schedule {
+				width: 100%;
+				height: 114px;
+			}
+
+			#schedule>.schedule_nav {
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				width: 1250px;
+				height: 114px;
+			}
+
+			#schedule>.schedule_nav>.schedule_left,
+			.schedule_right {
+				width: 15px;
+				height: 100px;
+				border: 1px solid gainsboro;
+				color: blue;
+				font-weight: bold;
+				position: absolute;
+				text-align: center;
+				line-height: 95px;
+			}
+
+			#schedule>.schedule_nav>.schedule_left:hover,
+			.schedule_right:hover {
+				border: 1px solid blue;
+			}
+
+			#schedule>.schedule_nav>.center {
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 18px;
+				width: 1140px;
+				margin-left: 53px;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			#schedule>.schedule_nav>.center>#schenUl {
+				overflow: hidden;
+			}
+
+			#schedule>.schedule_nav>.center>#schenUl>li {
+				float: left;
+				width: 114px;
+				height: 78px;
+				position: relative;
+				list-style: none;
+				font-size: 14px;
+				line-height: 25px;
+			}
+
+			#schedule>.schedule_nav>.center>#schenUl>li>.dataLeft {
+				width: 113px;
+				height: 76px;
+				background-color: #f7f7f7;
+				float: left;
+				text-align: center;
+				border: 1px solid #c4c4c4;
+				border-left: 0;
+				overflow: hidden;
+			}
+
+			#schedule>.schedule_nav>.center>#schenUl>li>.dataRigt {
+				width: 113px;
+				height: 76px;
+				background-color: #f7f7f7;
+				float: left;
+				text-align: center;
+				line-height: 80px;
+				border: 1px solid #c4c4c4;
+				border-left: 0;
+				overflow: hidden;
+			}
+
+			#schedule>.schedule_nav>.center>#schenUl>li>.dataRigt>a {
+				color: #606060;
+				font-size: 12px;
+			}
+
+			#content_1 {
+				width: 100%;
+			}
+
+			#content_1>.content_nav_1 {
+				width: 1250px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#content_1>.content_nav_1>.slideshow {
+				width: 800px;
+				height: 350px;
+				float: left;
+				position: relative;
+				overflow: hidden;
+			}
+
+			#content_1>.content_nav_1>.slideshow>ul>.pic {
+				list-style: none;
+			}
+
+			#content_1>.content_nav_1>.slideshow>ul>.pic>img {
+				width: 800px;
+				height: 350px;
+				float: left;
+				display: block;
+				border: none;
+				transition: all .6s;
+			}
+
+			#content_1>.content_nav_1>.slideshow>ul>.pic>p {
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				text-indent: 10px;
+				left: 0;
+				bottom: 0;
+				color: #fff !important;
+				line-height: 50px;
+				font-size: 22px;
+				background: rgba(0, 0, 0, .6);
+				float: left;
+			}
+
+			#content_1>.content_nav_1>.slideshow>a {
+				position: absolute;
+				top: 50%;
+				transform: translate(0px, -50%);
+				width: 50px;
+				height: 50px;
+				background: rgba(0, 0, 0, 0.3);
+				text-align: center;
+				line-height: 50px;
+				color: white;
+			}
+
+			#content_1>.content_nav_1>.slideshow>a:hover {
+				background: rgba(0, 0, 0, 0.6);
+			}
+
+			#content_1>.content_nav_1>.slideshow>.slideshow_left,
+				{
+				left: 0px;
+			}
+
+			#content_1>.content_nav_1>.slideshow>.slideshow_right {
+				right: 0px;
+			}
+
+			#content_1>.content_nav_1>.slideshow>.slideshow_point {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, 0px);
+				bottom: 20px;
+				padding: 5px 10px;
+				background: rgba(0, 0, 0, 0.3);
+			}
+
+			#content_1>.content_nav_1>.list {
+				width: 380px;
+				height: 350px;
+				float: right;
+				text-align: center;
+				font-size: 20px;
+			}
+
+			#content_1>.content_nav_1>.list>ul {
+				overflow: hidden;
+			}
+
+			#content_1>.content_nav_1>.list>ul>li {
+				width: 75px;
+				float: left;
+				list-style: none;
+				text-align: center;
+				line-height: 40px;
+				border: 1px solid #000;
+			}
+
+			#content_1>.content_nav_1>.list>ul>li>a {
+				text-decoration: none;
+				position: relative;
+				font-size: 20px;
+				color: gray;
+				font-weight: bold;
+			}
+
+			#content_1>.content_nav_1>.list>ul>li:hover>a {
+				text-decoration: underline;
+				color: blue;
+			}
+
+			#content_1>.content_nav_1>.list>.scorer {
+				width: 378px;
+				height: 320px;
+				display: none;
+			}
+
+			.t_red {
+				color: #FFFFFF;
+				background: red;
+			}
+
+			.t_blue {
+				color: #FFFFFF;
+				background: blue;
+			}
+
+			#content_2 {
+				width: 100%;
+				height: 500px;
+			}
+
+			#content_2>.content_nav_2 {
+				width: 1250px;
+				height: 500px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#content_2>.content_nav_2>.news {
+				float: left;
+				width: 800px;
+				height: 500px;
+			}
+
+			#content_2>.content_nav_2>.news>ul {
+				overflow: hidden;
+			}
+
+			#content_2>.content_nav_2>.news>ul>li {
+				width: 158px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 20px;
+				float: left;
+				list-style: none;
+				text-align: center;
+				border: 1px solid #000;
+			}
+
+			#content_2>.content_nav_2>.news>ul>li>a {
+				text-decoration: none;
+				position: relative;
+			}
+
+			#content_2>.content_nav_2>.news>ul>li:hover>a {
+				color: blue;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav {
+				display: none;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li {
+				width: 800px;
+				height: 165px;
+				list-style: none;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_nav_pic {
+				float: left;
+				margin-top: 20px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_nav_pic>img {
+				width: 200px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_nav_txt {
+				float: left;
+				margin-top: 15px;
+				margin-left: 20px;
+				width: 580px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_nav_txt>h4 {
+				font-size: 20px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_nav_txt>p {
+				color: grey;
+				font-size: 15px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_time {
+				margin-left: 220px;
+			}
+
+			#content_2>.content_nav_2>.news>.news_nav>ul>li>.news_time>span {
+				font-size: 14px;
+				color: grey;
+			}
+
+			.video {
+				width: 380px;
+				margin-top: 50px;
+				float: right;
+			}
+
+			.video>h4 {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+
+			button {
+				position: fixed;
+				right: 30px;
+				bottom: 30px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="pic">
+				<div class="logo">
+					<img src="http://img1.gtimg.com/sports/pics/hv1/207/111/2277/148090437.png" style="height: 61px;margin-top: 17px;"
+					 alt="">
+				</div>
+				<h1 class="name">
+					西甲联赛
+				</h1>
+				<div class="txt">
+					2020-2021赛季
+				</div>
+			</div>
+			<div class="nav_top">
+				<div class="top">
+					<div class="nav_logo">
+						<img src="//img1.gtimg.com/sports/pics/hv1/84/93/2311/150296574.png" style="height: 100%;">
+					</div>
+					<div class="main">
+						<ul>
+							<li>欧冠</li>
+							<li>英超</li>
+							<li>德甲</li>
+							<li>西甲</li>
+							<li>意甲</li>
+							<li>球迷社区</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="nav_bottom">
+				<div class="bottom">
+					<div class="sub">
+						<ul>
+							<li>积分榜</li>
+							<li>射手榜</li>
+							<li>赛程结果</li>
+							<li style="margin-left: 10px;">新闻滚动</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header><!-- 头部end -->
+
+
+		<!-- 赛程 -->
+		<div id="schedule">
+			<div class="schedule_nav">
+				<a class="schedule_left" style="float: left;left: 0px;">&lt;</a>
+				<a class="schedule_right" style="float: right;right: 0px;">&gt;</a>
+				<div class="center">
+					<ul id="schenUl" style="width: 2850px; margin-left: 0px;">
+						<li class="data " style="top: 0px;">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red1">已结束</span> <span class="state red1">12-20</span> </div>
+								<div class="match"> <span class="home-team">格拉纳达</span> <span class="home-score">2</span> </div>
+								<div class="match"> <span class="away-team">皇家贝蒂斯</span> <span class="away-score">0</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136337"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red1">已结束</span> <span class="state red1">12-21</span> </div>
+								<div class="match"> <span class="home-team">加的斯</span> <span class="home-score">0</span> </div>
+								<div class="match"> <span class="away-team">赫塔菲</span> <span class="away-score">2</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136336"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red1">已结束</span> <span class="state red1">12-21</span> </div>
+								<div class="match"> <span class="home-team">埃瓦尔</span> <span class="home-score">1</span> </div>
+								<div class="match"> <span class="away-team">皇家马德里</span> <span class="away-score">3</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136335"
+								 target="_blank">视频集锦</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">00:30</span> </div>
+								<div class="match"> <span class="home-team">瓦伦西亚</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">塞维利亚</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136347"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">00:30</span> </div>
+								<div class="match"> <span class="home-team">埃尔切</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">奥萨苏纳</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136350"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">02:45</span> </div>
+								<div class="match"> <span class="home-team">韦斯卡</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">莱万特</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136344"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">02:45</span> </div>
+								<div class="match"> <span class="home-team">皇家社会</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">马德里竞技</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136346"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">05:00</span> </div>
+								<div class="match"> <span class="home-team">巴拉多利德</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">巴塞罗那</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136348"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-23</span> <span class="state red">05:00</span> </div>
+								<div class="match"> <span class="home-team">比利亚雷亚尔</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">毕尔巴鄂竞技</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136349"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">00:30</span> </div>
+								<div class="match"> <span class="home-team">赫塔菲</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">塞尔塔</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136343"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">01:30</span> </div>
+								<div class="match"> <span class="home-team">哈罗</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">林恩斯</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=331:2175612"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">02:00</span> </div>
+								<div class="match"> <span class="home-team">萨莫拉</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">洛格罗涅斯</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=331:2175626"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">02:45</span> </div>
+								<div class="match"> <span class="home-team">皇家马德里</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">格拉纳达</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136345"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">05:00</span> </div>
+								<div class="match"> <span class="home-team">阿拉维斯</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">埃瓦尔</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136341"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-24</span> <span class="state red">05:00</span> </div>
+								<div class="match"> <span class="home-team">皇家贝蒂斯</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">加的斯</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136342"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-30</span> <span class="state red">00:00</span> </div>
+								<div class="match"> <span class="home-team">塞维利亚</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">比利亚雷亚尔</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136359"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-30</span> <span class="state red">02:15</span> </div>
+								<div class="match"> <span class="home-team">巴塞罗那</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">埃瓦尔</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136353"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-30</span> <span class="state red">04:30</span> </div>
+								<div class="match"> <span class="home-team">加的斯</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">巴拉多利德</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136355"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-30</span> <span class="state red">04:30</span> </div>
+								<div class="match"> <span class="home-team">莱万特</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">皇家贝蒂斯</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136357"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">00:00</span> </div>
+								<div class="match"> <span class="home-team">格拉纳达</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">瓦伦西亚</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136356"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">02:15</span> </div>
+								<div class="match"> <span class="home-team">马德里竞技</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">赫塔菲</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136352"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">02:15</span> </div>
+								<div class="match"> <span class="home-team">塞尔塔</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">韦斯卡</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136354"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">04:30</span> </div>
+								<div class="match"> <span class="home-team">埃尔切</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">皇家马德里</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136360"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">21:00</span> </div>
+								<div class="match"> <span class="home-team">毕尔巴鄂竞技</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">皇家社会</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136351"
+								 target="_blank">图文直播</a> </div>
+						</li>
+						<li class="data ">
+							<div class="dataLeft">
+								<div class="match"> <span class="item red">12-31</span> <span class="state red">23:15</span> </div>
+								<div class="match"> <span class="home-team">奥萨苏纳</span> <span class="home-score">-</span> </div>
+								<div class="match"> <span class="away-team">阿拉维斯</span> <span class="away-score">-</span> </div>
+							</div>
+							<div class="dataRigt" style="border-top-color: rgb(196, 196, 196);"> <a href="//kbs.sports.qq.com/kbsweb/game.htm?mid=23:2136358"
+								 target="_blank">图文直播</a> </div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- 赛程end -->
+
+
+		<!-- 内容1 -->
+		<div id="content_1">
+			<div class="content_nav_1">
+				<!-- 轮播图 -->
+				<div class="slideshow ">
+					<ul class="slideshow_nav" style="width: 1600px;">
+						<li class="pic">
+							<img src="http://img1.gtimg.com/sports/pics/hv1/27/212/2325/151237212.jpg">
+							<p>飞翼传射巴萨2-1逆转领头羊 梅西策动铁腰处子球 神枪离奇射失</p>
+						</li>
+						<li class="pic">
+							<img src="http://img1.gtimg.com/sports/pics/hv1/29/212/2325/151237214.jpg">
+							<!-- <p>皇马3-1积分追平榜首 真核破门＋造红牌 本泽马两球</p> -->
+						</li>
+					</ul>
+					<a class="slideshow_left">&lt;</a>
+					<a class="slideshow_right">&gt;</a>
+					<!-- <ul class="slideshow_point">
+						<li></li>
+						<li style="margin-right:0px;"></li>
+					</ul> -->
+				</div>
+				<!-- 榜单 -->
+				<div class="list">
+					<ul>
+						<li><a href="">积分榜</a></li>
+						<li><a href="">射手榜</a></li>
+					</ul>
+					<div class="scorer" style="display: block;">
+						<table width="378">
+							<tbody>
+								<tr class="list_nav_top">
+									<th height="55" style="text-align: center;">名次</th>
+									<th height="55" style="text-align: center">球队</th>
+									<th height="55" style="text-align: center">胜/平/负</th>
+									<th height="55" style="text-align: center">积分</th>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">1</i></td>
+									<td height="49" style="text-align: center">马德里竞技</td>
+									<td height="49" style="text-align: center">9/2/1</td>
+									<td height="49" style="text-align: center">29</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">2</i></td>
+									<td height="49" style="text-align: center">皇家马德里</td>
+									<td height="49" style="text-align: center">9/2/3</td>
+									<td height="49" style="text-align: center">29</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">3</i></td>
+									<td height="49" style="text-align: center">皇家社会</td>
+									<td height="49" style="text-align: center">7/5/3</td>
+									<td height="49" style="text-align: center">26</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_blue">4</i></td>
+									<td height="49" style="text-align: center">比利亚雷亚尔</td>
+									<td height="49" style="text-align: center">6/7/1</td>
+									<td height="49" style="text-align: center">25</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_blue">5</i></td>
+									<td height="49" style="text-align: center">巴塞罗那</td>
+									<td height="49" style="text-align: center">6/3/4</td>
+									<td height="49" style="text-align: center">21</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<div class="scorer">
+						<table width="378">
+							<tbody>
+								<tr class="list_nav_top">
+									<th height="55" style="text-align: center">名次</th>
+									<th height="55" style="text-align: center">球员</th>
+									<th height="55" style="text-align: center">球队</th>
+									<th height="55" style="text-align: center">进球</th>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">1</i></td>
+									<td height="49" style="text-align: center"> 杰拉德-莫雷诺</td>
+									<td height="49" style="text-align: center">比利亚雷亚尔</td>
+									<td height="49" style="text-align: center">8(4)</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">2</i></td>
+									<td height="49" style="text-align: center">本泽马</td>
+									<td height="49" style="text-align: center">皇家马德里</td>
+									<td height="49" style="text-align: center">7</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_red">3</i></td>
+									<td height="49" style="text-align: center">苏亚雷斯</td>
+									<td height="49" style="text-align: center">马德里竞技</td>
+									<td height="49" style="text-align: center">7</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_blue">4</i></td>
+									<td height="49" style="text-align: center">阿斯帕斯</td>
+									<td height="49" style="text-align: center">塞尔塔</td>
+									<td height="49" style="text-align: center">7(2)</td>
+								</tr>
+								<tr>
+									<td height="49" style="text-align: center"><i class="t_blue">5</i></td>
+									<td height="49" style="text-align: center">奥亚萨瓦尔</td>
+									<td height="49" style="text-align: center">皇家社会</td>
+									<td height="49" style="text-align: center">7(5)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!-- 内容1end -->
+		<!-- 内容2 -->
+		<div id="content_2">
+			<div class="content_nav_2">
+				<!-- 新闻 -->
+				<div class="news">
+					<ul>
+						<li><a href="">巴塞罗那</a></li>
+						<li><a href="">皇家马德里</a></li>
+						<li><a href="">马德里竞技</a></li>
+						<li><a href="">西班牙人</a></li>
+						<li><a href="">诸强</a></li>
+					</ul>
+					<div class="news_nav" style="display: block;">
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12945273970_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">萨拉赫续约成疑？名记：利物浦或用其套现买姆巴佩</h4>
+									<p class="txt">英超14轮战罢，利物浦前锋萨拉赫以13球领先第二名瓦尔迪2球独占射手榜鳌头。作为利物浦头号射手，素有“埃及梅西”之称的他日前接受了西班牙《阿斯报》的采访，毫不避讳地表示西甲球队皇马和巴萨是数一数二的……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 23:00:29</span>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12945252297_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">糟心的儿萨梦！库蒂尼奥满怀信心归来，巴萨却为省下2000万欧要卖掉他</h4>
+									<p class="txt">库蒂尼奥，又尴尬了。自从对克洛普树碑立像的挽留于不顾，决然去追逐自己的儿萨梦之后，库蒂尼奥活生生地把自己活成了足球圈里的段子王。他背负着骂名来到巴萨，是为了夺取圣勃莱德杯，是为了追逐金球奖。然而，巴……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 22:53:33</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="news_nav">
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12945136766_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">皇马重磅官宣！39岁传奇回归秒变CEO，球迷泪目：终于等到你</h4>
+									<p class="txt">北京时间12月22日晚，皇家马德里俱乐部官方宣布，39岁的卡西利亚斯将重回皇马。这次他担任的是皇马基金会的CEO。卡西利亚斯已经退役，这次回归皇马更多的是在管理层担当职务。2014年，圣卡西随着皇马……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 22:23:00</span>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12944716573_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">为何马特拉齐在国际米兰夺下欧冠奖杯之后，会痛骂穆里尼奥是个混蛋？</h4>
+									<p class="txt">讨厌穆里尼奥的人很难欣赏穆帅身上的气质。同样，喜爱穆帅的人喜欢属于穆帅的一切。那么作为穆里尼奥国米时期得意弟子的马特拉齐又为何会骂穆里尼奥是一个混蛋呢？众所周知，在2010年欧冠决赛后，马特拉齐公开……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 20:48:52</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="news_nav">
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12943555717_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">西甲一周资讯｜马德里双雄领跑排行榜，梅西追平贝利纪录</h4>
+									<p class="txt">马德里双雄领跑排行榜新一轮比赛日结束后，马德里竞技和皇家马德里均以29分的积分坐上了积分榜的头两名，马竞虽少赛两轮，但还是位居第一。不过这两支来自西班牙首都的球队都在上一轮比赛中3-1击败了对手，现……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 16:52:46</span>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12943655277_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">第15轮｜马竞战皇社皇马遇石榴，圣诞前谁能占据榜首？</h4>
+									<p class="txt">鉴于疫情影响，今年西甲也开启了“圣诞快车”模式，圣诞节前夕20路诸侯将马不停蹄开启第15轮征程。目前积分榜前列仍是错综复杂，皇马与马竞同分，虽然马竞多赛两场，但卫冕冠军近来起势明显，各项赛事五连胜，……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 16:39:50</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="news_nav">
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12944574007_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">1-11！西班牙人巨星踢疯了，巴萨惨遭打脸，超8成球迷认为他更好</h4>
+									<p class="txt">德托马斯在西乙联赛混得风生水起，西班牙人队史最贵先生进一步体现了自己的价值。对此，《马卡报》特意撰文发起了一项球迷投票：德托马斯和布莱斯维特谁更强呢？结果在10000多名球迷的投票中，德托马斯脱颖而……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 20:19:54</span>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12945112430_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">身价一降一升 中韩第一球星的价值差距越拉越大</h4>
+									<p class="txt">2020年就要过去了，最新一期的《德国转会市场》身价榜也出炉了。在这份年终排行榜上，武磊的身价较上一期缩水了100万欧元，但仍以600万欧元（约合4800万元人民币）的身价在中国球员中排名第一。不过……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 22:18:02</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="news_nav">
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12945177787_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">下课赔率第1，但阿尔特塔帅位无忧！阿森纳1月强势瞄准1.25亿锋霸</h4>
+									<p class="txt">据英国《每日镜报》的消息，虽然阿森纳本赛季经历了噩梦般的开局。14轮仅拿到4胜2平8负的战绩，积14分排在积分榜第15位，但球队主帅阿尔特塔的帅位暂时无忧。枪手高层们仍然对他扭转局面的能力充满信心，……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-22 16:47:19</span>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="news_nav_pic">
+									<img src="https://inews.gtimg.com/newsapp_ls/0/12936842024_640330/0">
+								</div>
+								<div class="news_nav_txt">
+									<h4 class="title">官方计为6.7秒，五大联赛最快进球TOP5中只有莱奥进入7秒以内</h4>
+									<p class="txt">在AC米兰客场对萨索洛的比赛中，拉斐尔-莱奥开场仅6.7秒(官方统计)即完成破门，这不仅是意甲历史上的最快进球，也是欧洲五大联赛中最快的进球，最快进球前五位里只有莱奥的这粒进球在7秒以内。开场哨响后……</p>
+								</div>
+								<div class="news_time">
+									<span class="time">2020-12-21 09:01:45</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 精彩回放 -->
+				<div class="video">
+					<h4>精彩回放</h4>
+					<video style="width: 380px;" src="https://vodzz.duoduocdn.com/4a8d9c67vodtransgzp1251542705/e77681185213833187164988697/v.f100820.mp4"
+					 controls></video>
+				</div>
+			</div>
+		</div><!-- 内容2end -->
+
+		<button>回到顶部</button>
+
+		<script>
+			// 赛程
+			var i = 0;
+			$(".schedule_left").click(function() {
+				i--;
+				if (i == -4) {
+					i = 0;
+				}
+				var num = parseInt(i / 570);
+				$("#schenUl").animate({
+					"margin-left": i * 570 + "px"
+				}, 1000);
+			})
+			var i = 0;
+			$(".schedule_right").click(function() {
+				i++;
+				if (i == 4) {
+					i = 0;
+				}
+				var num = parseInt(i / 570);
+				$("#schenUl").animate({
+					"margin-left": -i * 570 + "px"
+				}, 1000);
+			})
+			$(".data").hover(function() {
+					$(this).animate({
+						"margin-top": -77.9 + "px"
+					}, 500);
+				},
+				function() {
+					$(this).animate({
+						"margin-top": 0 + "px"
+					}, 500);
+				}) // 赛程end
+
+			// 轮播图
+			var i = 0;
+			$(".slideshow_left").click(function() {
+				i--;
+				if (i == -2) {
+					i = 0;
+				}
+				var num = parseInt(i / 800);
+				$(".slideshow_nav").animate({
+					"margin-left": i * 800 + "px"
+				}, 1000);
+			})
+			var i = 0;
+			$(".slideshow_right").click(function() {
+				i++;
+				if (i == 2) {
+					i = 0;
+				}
+				var num = parseInt(i / 800);
+				$(".slideshow_nav").animate({
+					"margin-left": -i * 800 + "px"
+				}, 1000);
+			}) // 轮播图end
+
+			// 榜单
+			$(".list>ul>li").hover(function() {
+				$(".scorer").eq($(this).index()).show().siblings(".scorer").hide();
+			}) // 榜单end
+			// 新闻
+			$(".news>ul>li").hover(function() {
+				$(".news_nav").eq($(this).index()).show().siblings(".news_nav").hide();
+			}) // 新闻end
+			// 回到顶部
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 1200) {
+					$("button").show();
+				} else {
+					$("button").hide();
+				}
+			})
+			$("button").click(function() {
+				$("html,body").animate({
+					"scrollTop": "0px"
+				}, 1000)
+			}) // 回到顶部end
+		</script>
+		<!-- 底部版权 -->
+		<div class="area foot">
+			<!--版权页面片 S-->
+			<script>
+				var NavNoticeSiteName = ["sports", "tech", "games", "cul", "edu", "fashion", "house", "auto", "finance", "ent"];
+			</script>
+			<script src="//mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script>
+			<!--[if !IE]>|xGv00|160405494288ecc3516e240c185c4fd7<![endif]-->
+			<style>
+				.tcopyright {
+					width: 960px;
+					margin: 0 auto;
+					padding: 8px 0;
+					font-size: 12px;
+					line-height: 28px;
+					color: #333;
+					text-align: center;
+					overflow: hidden;
+					clear: both;
+				}
+
+				.tcopyright .en {
+					font-family: Arial;
+				}
+
+				.tcopyright a {
+					color: #333;
+					text-decoration: none;
+				}
+
+				.tcopyright a:hover {
+					color: #bd0a01;
+					text-decoration: underline;
+				}
+
+				.footernew {
+					color: #515151;
+					font-size: 12px;
+					height: 70px;
+					line-height: 24px;
+					margin: 12px auto 0;
+					overflow: hidden;
+					text-align: center;
+					width: 1000px;
+				}
+
+				.footernew .footernewdiv {
+					margin: 0 auto;
+					width: 680px;
+				}
+
+				.footernew p {
+					border: 1px solid #D2D2D2;
+					float: left;
+					font-size: 12px;
+					height: 50px;
+					line-height: 20px;
+					margin: 6px;
+					padding: 0;
+					width: 120px;
+					overflow: hidden;
+				}
+
+				.footernew .fl {
+					padding: 3px;
+				}
+
+				.qq-footer .footernew .fr {
+					padding: 5px 3px 0;
+					width: 72px;
+				}
+
+				.qq-footer .footernew a {
+					color: #515151;
+					text-decoration: none;
+				}
+			</style>
+			<div id="tcopyright" class="tcopyright" bossZone="footer" role="contentinfo">
+				<div>
+					<a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml"
+					 target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a>
+					| <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/"
+					 target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a>
+					| <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/"
+					 target="_blank" rel="nofollow">腾讯公益</a> | <a href="https://cloud.tencent.com/?from=txwdibu" target="_blank" rel="nofollow">腾讯云</a>
+					| <a href="http://service.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://news.qq.com/zt2014/2014qtnews/ccybspxd.htm
+	"
+					 target="_blank" rel="nofollow">举报中心</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">网站导航</a>
+					<br />
+					<a href="http://szwljb.sz.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> |
+					<a href="http://ga.sz.gov.cn" target="_blank" rel="nofollow">深圳公安局</a> |
+					<a href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> |
+					<a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> |
+					<a href="https://gdca.miit.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a>
+					<br>
+					<span>
+						<a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a>
+						<a href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a>
+						<a href="http://www.qq.com/cbst.shtml" target="_blank" rel="nofollow">网络视听许可证1904073号</a>
+						<a href="http://www.qq.com/cbst.shtml" target="_blank" rel="nofollow">网络视听许可证1904073号</a>
+						增值电信业务经营许可证：<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">粤B2-20090059</a>
+						<a href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+					</span>
+					<br>
+					<a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a>
+					<a href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+					违法和不良信息举报电话：0755-83765566-9
+					<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001">
+						<span>粤公网安备44030002000001号</span>
+					</a>
+					<br>
+					<a href="http://www.qq.com/spyp.htm" target="_blank">互联网药品信息服务资格证书 （粤）—非营业性—2017-0153</a>
+					<br>
+					<div class="footernew">
+						<div class="footernewdiv">
+							<p>
+								<span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank" rel="nofollow"><img
+										 width="35" height="43" border="0" alt="经营性网站备案信息" src="//mat1.gtimg.com/www/images/qq2012/ind36.gif"></a></span>
+								<span class="fr"><a target="_blank" class="lcblack" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+									 rel="nofollow">经营性网站<br>
+										备案信息</a></span>
+							</p>
+							<p>
+								<span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img width="44"
+										 height="44" border="0" alt="中国互联网举报中心" src="//mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+								<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank" rel="nofollow">中国互联网<br>
+										举报中心</a></span>
+							</p>
+							<p>
+								<span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img width="44"
+										 height="42" border="0" alt="中国文明网传播文明" src="//mat1.gtimg.com/www/images/qq2012/wmlogo.gif"></a></span>
+								<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank" rel="nofollow">中国文明网<br>传播文明</a></span>
+							</p>
+							<p style="width:128px;height:52px;border:0;">
+								<span style="padding:0;" class="fl"><a href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&amp;ct=df&amp;a=1&amp;pa=337337"
+									 target="_blank" rel="nofollow"><img border="0" alt="诚信网站" src="//mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+							</p>
+							<p>
+								<span style="width:44px;" class="fl"><a href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+									 target="_blank" rel="nofollow"><img src="//mat1.gtimg.com/www/images/qq2012/gswj2015.jpg" title="深圳市市场监督管理局企业主体身份公示"
+										 alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+								<span style="width:64px;" class="fr"><a class="lcblack" href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+									 target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="en">Copyright &copy; 1998 -
+
+					2020 Tencent. All Rights Reserved</div>
+				<div>
+					<a href="http://www.tencent.com/" target="_blank" rel="nofollow">腾讯公司</a> <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml"
+					 target="_blank" rel="nofollow">版权所有</a>
+				</div>
+			</div>
+			<!--[if !IE]>|xGv00|1946a31bc73a15246842877bdfa16df2<![endif]-->
+			<!--版权页面片 E-->
+		</div><!-- 底部版权end -->
+	</body>
+</html>

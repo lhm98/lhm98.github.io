@@ -1,0 +1,389 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+/*头部*/
+header{
+	height: 80px;
+	position: relative;
+	/*border-bottom: 1px solid#333333;*/
+}
+/*头部共享样式*/
+header div{
+	position: absolute;
+	top:50%;
+	transform: translate(0px,-50%);
+}
+header>div>span a{
+	color: #3563D5;
+	background-color: #e3f3fe;
+	padding: 5px 13px;
+	border-radius: 25px;
+	
+}
+/*头部logo图片*/
+header>.header_logo{
+	left: 45px;
+}
+header>.header_logo>h1>a>img{
+	width: 122px;
+	height: 33px;
+}
+/*头部导航栏*/
+header>.header_nav{
+	left: 167px;
+}
+header>.header_nav>ul>li>a:hover{
+	color: lightskyblue;
+}
+header>.header_nav>ul>li{
+	float: left;
+	padding:0px  15px;
+}
+header>.header_nav>ul>li>a{
+	font-size: 18px;
+}
+/*头部二级导航*/
+header>.header_subnav{
+	left: 972px;
+}
+header>.header_subnav>span>a{
+	width: 20px;
+	height: 20;
+}
+/*header>#iii{
+	width: 1240px;
+	height: 482px;
+	background-color: blue;
+	position: absolute;
+	bottom: 1000px ;
+	left: 100px;
+	/*display: inline-block;
+}*/
+
+/*头部二级导航登录条*/
+header>.header_loginbar{
+	right: 40px;
+}
+
+/*主体内容*/
+section{
+	height: 3000px;
+	position: relative;
+	border-top: 1px solid gainsboro;
+}
+/*主体内容导航栏*/
+section>.section_nav{
+	position: absolute;
+	top: 50px;
+	left: 108px;
+}
+section>.section_nav>ul>li>a:hover{
+	color: lightskyblue;
+}
+section>.section_nav>ul>li{
+	border: 1px solid #f0f0f0;
+	padding: 20px 40px;
+}
+section>.section_nav>ul>li>a{
+	font-size: 14px;
+}
+/*主体内容大事件*/
+section>.section_bignew{
+	width: 700px;
+	height: 272px;
+	position: absolute;
+	top: 51px;
+	left: 302px;
+}
+div>div{
+	float: left;
+}
+div>.left>a{
+	display: block;
+	width: 458px;
+	height: 272px;
+	background-image: url(../img/J0101.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-decoration: none;
+	position: relative;
+}
+div>.left>a>span{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	bottom:10px;
+	left: 10px;
+}
+div>.right>a{
+	display: block;
+	width: 230px;
+	height: 130px;
+	background-image: url(../img/J0102.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-decoration: none;
+	position: relative;
+	bottom: 0px;
+	right: -12px;
+}
+div>.right>a>span{
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	bottom:10px;
+	left: 10px;
+}
+div>.right_t>a{
+	display: block;
+	width: 230px;
+	height: 130px;
+	background-image: url(../img/J0103.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-decoration: none;
+	position: relative;
+	top:10px;
+	right: -12px;
+	
+}
+div>.right_t>a>span{
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	bottom:9px;
+	left: -12px;
+}
+
+/*热点精选标题*/
+section>.section_title{
+	width: 670px;
+	text-align: center;
+	position: absolute;
+	top: 353px;
+	left: 15px;
+	color: #5889ec;
+	
+}
+/*热点精选内容*/
+section>.secion_HotPicks{
+	width: 700px;
+	position: absolute;
+	top: 400px;
+	left: 300px;
+	
+}
+section>.secion_HotPicks>ul>li{
+	float: left;
+	margin:20px 0px;
+	width: 700px;
+}
+section>.secion_HotPicks>ul>li>a>img{
+	width: 252px;
+	height: 130px;
+	float: left;
+}
+
+section>.secion_HotPicks>ul>li>a>.secion_HotPicks_title{
+	width: 418px;
+	height: 65px;
+	float: right;
+	font-size: 20px;
+	margin-left: 20px;
+	color: #333333;
+	position: relative;
+	text-align: left;
+}
+#Bright:before{
+	content: "专题";
+	padding: 2px 5px;
+	color: white;
+	background-color: #4889F3;
+	border-radius: 5px;
+	font-size: 14px;
+	position: relative;
+}
+
+section>.secion_HotPicks>ul>li>.secion_HotPicks_Share{
+	width: 416px;
+	float: left;
+	font-size: 12px;
+	color: #666666;
+    margin-left: 30px;
+    margin-top: 46px;
+}
+section>.secion_HotPicks>ul>li>.secion_HotPicks_Share>.secion_HotPicks_Share_left{
+	float: left;
+	margin-right: 20px;
+}
+section>.secion_HotPicks>ul>li>.secion_HotPicks_Share>.secion_HotPicks_Share_right{
+	float: right;
+}
+/*section>.secion_HotPicks>.secion_HotPicks__footer:hover{
+	color: red;
+}*/
+
+section>.secion_HotPicks>.secion_HotPicks__footer{
+	width: 700px;
+	text-align: center;
+	background-color: #F0F0F0;
+	color: #666666;
+	padding: 5px 0px;
+	border-radius: 5px;
+}
+
+
+#secion_Newss{
+	width: 700px;
+	position: absolute;
+	top: 800px;
+	left: 300px;
+	
+}
+
+
+/*疫情实时追踪*/
+section>.section_tainer{
+	width: 300px;
+	height: 296px;
+	position: absolute;
+	top: 49px;
+	right: 25px;
+}
+section>.section_tainer>.section_tainer_header>img{
+	width: 300px;
+	height: 117px;
+}
+section>.section_tainer>.section_tainer_show{
+	width: 300px;
+	height: 156px;
+}
+section>.section_tainer>.section_tainer_show>ul{
+	float: left;
+}
+section>.section_tainer>.section_tainer_show>ul>li{
+	width: 95px;
+	height: 78px;
+	text-align: center;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+section>.section_tainer>.section_tainer_show>ul>li>a>p{
+	line-height: 25px;
+}
+section>.section_tainer>.section_tainer_show>p{
+	color: #737373;
+	font-size: 10px;
+}
+
+/*24小时必读*/
+section>.section_date{
+	width: 300px;
+	position: absolute;
+	top: 394px;
+	right: 25px;
+}
+section>.section_date>h2{
+	color: #4889f3;
+	font-size: 24px;
+}
+section>.section_date>.section_date_Content{
+	width: 300px;
+	height: 500px;
+}
+
+/*24小时必读内容*/
+section>.section_date>.section_date_Content>ul{
+	background-color: #f7f8f9;
+}
+section>.section_date>.section_date_Content>ul>li{
+	padding: 10px 10px;
+	
+}
+section>.section_date>.section_date_Content>ul>li>a>img{
+	width: 120px;
+	height: 79px;
+	float: left;
+	padding-right: 10px;
+}
+section>.section_date>.section_date_Content>ul>li>a>p{
+	font-size: 14px;
+	margin: 5px 10px 10px 20px;
+	text-align: left;
+}
+
+/*热门资讯*/
+#hot_title{
+	position: absolute;
+	top: 598px;
+	left: 0px;
+}
+#hot_new{
+	position: absolute;
+	top: 640px;
+	left: 0px;
+}
+/*精品原创*/
+#Choicest_title{
+	position: absolute;
+	top: 1127px;
+	left: 0px;
+	
+}
+#Choicest_new{
+	position: absolute;
+	top: 1174px;
+	left: 0px;
+	
+}
+
+
+/*底部*/
+footer{
+	height: 228px;
+}
+
+footer>.footer_top>p{
+	text-align: center;
+	padding: 10px 0px;
+	
+}
+footer>.footer_top>p>span{
+	border-left: 1px solid black;
+	padding-left: 3px;
+	font-size: 12px;
+}
+footer>.footer_bottom{
+	width:552px;
+	background: black;
+	position: relative;
+	left: 380px;
+	top:27px;
+}
+footer>.footer_bottom>.footer_bottom_Reporting{
+	width: 115px;
+	height: 52px;
+	border: 1px solid gainsboro;
+	padding: 1px 5px;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+footer>.footer_bottom>.footer_bottom_Reporting>span>a>img{
+	float: left;
+	height: 44px;
+	width: 44px;
+}
+footer>.footer_bottom>.footer_bottom_Reporting>span>a{
+	font-size: 12px;
+}

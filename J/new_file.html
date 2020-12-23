@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">更多</div>
+		<script type="text/javascript">
+			var div = document.getElementById("div");
+			var flag = 0;
+			div.onclick = function(){
+				
+				if(flag == 0){
+					this.innerHTML = "收起";
+					flag = 1;
+				}else if(flag == 1){
+					this.innerHTML = "更多";
+					flag = 0;
+				}
+
+			}
+		</script>
+	</body>
+</html>
